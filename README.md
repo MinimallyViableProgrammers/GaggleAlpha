@@ -5,3 +5,5 @@ Hello world!
 
 If you are reading this, then you are already dead.
 :) :D
+
+The story of my life began with a single moment of clarity.
