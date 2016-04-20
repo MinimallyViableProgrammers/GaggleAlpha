@@ -7,18 +7,17 @@ import java.util.ArrayList;
  */
 public class PartyModel {
 
-    private String id;
+    private String imageId;
     private String partyDescription;
+    private String partyName;
     private ArrayList<String> partyImageUrls;
-    public PartyModel() {
-        id = " ";
-        partyDescription = " ";
-    }
-    public String getID() {return id;}
+    public String getID() {return imageId;}
+    public String getPartyName() { return partyName; }
     public String getPartyDescription() {return partyDescription;}
     public ArrayList<String> getPartyImageUrls() { return partyImageUrls; }
 
-    public void setID(String pid) { id = pid; }
+    public void setID(String pid) { imageId = pid; }
+    public void setPartyName(String someName) { partyName = someName; }
     public void setPartyDescription(String pDesc) { partyDescription = pDesc; }
 
 

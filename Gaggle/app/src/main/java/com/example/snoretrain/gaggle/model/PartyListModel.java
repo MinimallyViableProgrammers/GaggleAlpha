@@ -11,7 +11,8 @@ public class PartyListModel {
 
     @SerializedName("matches")
     public ArrayList<PartyModel> listResults;
-    public PartyListModel(){};
+    public PartyListModel(){
+    };
 
     public ArrayList<PartyModel> getListResults() { return listResults;}
 

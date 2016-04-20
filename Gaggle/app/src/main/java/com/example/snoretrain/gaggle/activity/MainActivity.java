@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         PartySearchTask partySearchTask = new PartySearchTask(listener);
+        partySearchTask.execute("red_cup");
         
     }
 }

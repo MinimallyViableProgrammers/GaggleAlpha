@@ -1,5 +1,6 @@
 package com.example.snoretrain.gaggle.adapter;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ import com.example.snoretrain.gaggle.model.PartyModel;
 public class PartyViewHolder extends RecyclerView.ViewHolder {
 
     private ImageView partyImage;
+    private TextView partyName;
     private TextView partyDescription;
 
     public PartyViewHolder(final View partyView) { super(partyView); }
@@ -25,10 +27,14 @@ public class PartyViewHolder extends RecyclerView.ViewHolder {
 
         partyImage = (ImageView)itemView.findViewById(R.id.partyImage);
         partyDescription = (TextView)itemView.findViewById(R.id.partyDescription);
+        partyName = (TextView)itemView.findViewById(R.id.partyName);
 
-        Glide.with(itemView.getContext())
+        partyImage.setImageResource(R.drawable.red_cup);
+        /*Glide.with(itemView.getContext())
                 .load(party.getPartyImageUrls().get(0))
-                .into(partyImage);
+                .into(partyImage);*/
+        partyName.setText(party.getPartyName());
+        partyDescription.setText(party.getPartyDescription());
     }
 
     public final void unbind() {
