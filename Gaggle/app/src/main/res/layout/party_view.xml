@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@drawable/party_background"
     android:paddingBottom="4dp"
     android:paddingLeft="4dp"
     android:paddingRight="4dp"
@@ -20,11 +20,13 @@
             android:id="@+id/partyName"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:textColor="#FFFFFF"
             android:singleLine="true"/>
         <TextView
             android:id="@+id/partyDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:singleLine="false"/>
     </LinearLayout>
 </LinearLayout>

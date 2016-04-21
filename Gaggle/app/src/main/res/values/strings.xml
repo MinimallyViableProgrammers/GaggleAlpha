@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Gaggle</string>
+    <color name="slate_grey">#708090</color>
+    <color name="rebecca_purple">#663399</color>
 </resources>
