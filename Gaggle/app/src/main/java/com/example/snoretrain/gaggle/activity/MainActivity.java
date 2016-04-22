@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
                 partyRecycler.setAdapter(adapter);
 
-                partyRecycler.addItemDecoration(new VerticalItemDecoration(9));
+                partyRecycler.addItemDecoration(new VerticalItemDecoration(4));
             }
         };
 
