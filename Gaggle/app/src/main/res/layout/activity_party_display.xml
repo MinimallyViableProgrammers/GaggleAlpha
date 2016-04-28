@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/rebecca_purple"
     android:orientation="vertical"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.DisplayPartyActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -16,12 +16,17 @@
         app:titleTextColor="@android:color/white"
         android:background="@color/slate_grey">
     </android.support.v7.widget.Toolbar>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/partyRecycler"
+    <ImageView
+        android:id="@+id/partyImageDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp" />
+    <TextView
+        android:id="@+id/partyNameDisplay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="1dp"
-        android:layout_weight="1"/>
+        android:layout_height="16dp" />
+    <TextView
+        android:id="@+id/partyDescriptionDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
 
 </LinearLayout>

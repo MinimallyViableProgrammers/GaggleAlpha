@@ -16,4 +16,8 @@ public class PartyListModel {
 
     public ArrayList<PartyModel> getListResults() { return listResults;}
 
+    public PartyModel getPartyModel(int position){
+        return listResults.get(position);
+    }
+
 }
