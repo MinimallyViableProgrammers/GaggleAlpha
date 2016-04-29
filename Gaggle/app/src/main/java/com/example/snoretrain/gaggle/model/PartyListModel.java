@@ -7,17 +7,10 @@ import java.util.ArrayList;
 /**
  * Created by Snore Train on 4/18/2016.
  */
-public class PartyListModel {
-
-    @SerializedName("matches")
-    public ArrayList<PartyModel> listResults;
-    public PartyListModel(){
-    };
-
-    public ArrayList<PartyModel> getListResults() { return listResults;}
+public class PartyListModel extends ArrayList<PartyModel>{
 
     public PartyModel getPartyModel(int position){
-        return listResults.get(position);
+        return this.get(position);
     }
 
 }

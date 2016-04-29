@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSearchCallback(PartyListModel partyListModel) {
 
-                adapter = new PartyAdapter(partyListModel.getListResults());
+                adapter = new PartyAdapter(partyListModel);
 
                 partyRecycler.setLayoutManager(layoutManager);
 
