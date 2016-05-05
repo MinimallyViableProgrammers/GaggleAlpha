@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 
 import com.example.snoretrain.gaggle.R;
 import com.example.snoretrain.gaggle.adapter.PartyAdapter;
@@ -53,9 +55,16 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+
         PartySearchTask partySearchTask = new PartySearchTask(listener);
         partySearchTask.execute("red_cup");
-        
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add_new);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
