@@ -31,6 +31,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.snoretrain.gaggle.activity.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.snoretrain.gaggle.activity.CreatePartyActivity"
+            android:parentActivityName="com.example.snoretrain.gaggle.activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.snoretrain.gaggle.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

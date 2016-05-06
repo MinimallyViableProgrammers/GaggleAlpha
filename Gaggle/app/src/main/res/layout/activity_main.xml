@@ -15,6 +15,11 @@
         android:layout_height="wrap_content"
         app:titleTextColor="@android:color/white"
         android:background="@color/slate_grey">
+        <ImageButton
+            android:id="@+id/createButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/plus_sign2"/>
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView
@@ -24,12 +29,5 @@
         android:paddingTop="1dp"
         android:layout_weight="1"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_new"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android/drawable/plus_sign" />
 
 </LinearLayout>

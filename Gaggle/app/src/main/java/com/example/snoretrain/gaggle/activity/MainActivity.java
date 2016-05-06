@@ -1,5 +1,6 @@
 package com.example.snoretrain.gaggle.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,10 +11,9 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 
 import com.example.snoretrain.gaggle.R;
 import com.example.snoretrain.gaggle.adapter.PartyAdapter;
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ImageButton createButton = (ImageButton) findViewById(R.id.createButton) ;
+
 
         setSupportActionBar(toolbar);
 
@@ -55,16 +57,17 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(v.getContext(), CreatePartyActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
         PartySearchTask partySearchTask = new PartySearchTask(listener);
         partySearchTask.execute("red_cup");
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add_new);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
