@@ -19,36 +19,43 @@
         android:id="@+id/partyNameSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="Party Name"/>
     <EditText
         android:id="@+id/partyDescriptionSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="Party Description"/>
     <EditText
         android:id="@+id/partyStartTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="Start Time"/>
     <EditText
         android:id="@+id/partyEndTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="End Time"/>
     <EditText
         android:id="@+id/partyAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="Address"/>
     <EditText
         android:id="@+id/partyState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="State"/>
     <EditText
         android:id="@+id/partyCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
         android:hint="City"/>
     <Button
         android:id="@+id/submitPartyButton"
