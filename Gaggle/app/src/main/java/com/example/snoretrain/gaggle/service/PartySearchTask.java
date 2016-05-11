@@ -2,13 +2,12 @@ package com.example.snoretrain.gaggle.service;
 
 import android.os.AsyncTask;
 
-import java.io.IOException;
-
 import com.example.snoretrain.gaggle.listener.IPartyCallbackListener;
 import com.example.snoretrain.gaggle.model.PartyListModel;
-import com.example.snoretrain.gaggle.model.PartyModel;
 import com.example.snoretrain.gaggle.utility.PartyParser;
 import com.example.snoretrain.gaggle.utility.UrlFormatUtility;
+
+import java.io.IOException;
 
 /**
  * Created by Snore Train on 4/19/2016.
@@ -32,6 +31,11 @@ public class PartySearchTask extends AsyncTask<String,String,PartyListModel> {
            response = httpRequestManager.getParty(UrlFormatUtility.formatPartySearchString());
        } catch (IOException exception) {
            String exceptionString = exception.getMessage();
+       }
+
+       if (response == null){
+           PartyListModel nplm = new PartyListModel();
+           return nplm;
        }
 
 

@@ -1,5 +1,7 @@
 package com.example.snoretrain.gaggle.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -8,11 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.snoretrain.gaggle.R;
-import com.example.snoretrain.gaggle.service.HttpRequestManager;
-import com.example.snoretrain.gaggle.utility.PartyMashedPotatoes;
-import com.example.snoretrain.gaggle.utility.UrlFormatUtility;
-
-import java.io.IOException;
+import com.example.snoretrain.gaggle.listener.IPartyPostBackListener;
+import com.example.snoretrain.gaggle.service.PartyPostTask;
 
 /**
  * Created by Snore Train on 5/5/2016.
@@ -50,16 +49,20 @@ public class CreatePartyActivity extends AppCompatActivity{
                         "cake_2", "100", partyStartTime.getText().toString(), partyEndTime.getText().toString(),
                         partyDescriptionSubmit.getText().toString()
                 };
+                IPartyPostBackListener listener = new IPartyPostBackListener() {
+                    @Override
+                    public void onPostCallBack() {
 
-                HttpRequestManager httpRequestManager = new HttpRequestManager();
+                    }
 
-                try {
-                    httpRequestManager.newParty(PartyMashedPotatoes.formatPartyMashedPotatoes(partyInfoStrings));
-                } catch (IOException exception) {
-                    String exceptionString = exception.getMessage();
-                }
+                };
 
+                PartyPostTask partyPostTask = new PartyPostTask(listener);
+                partyPostTask.execute(partyInfoStrings);
 
+                Context context = v.getContext();
+                Intent intent = new Intent(v.getContext(), MainActivity.class);
+                context.startActivity(intent);
             }
         });
 

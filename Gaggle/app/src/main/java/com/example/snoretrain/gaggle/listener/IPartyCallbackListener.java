@@ -7,4 +7,5 @@ import com.example.snoretrain.gaggle.model.PartyListModel;
  */
 public interface IPartyCallbackListener {
     void onSearchCallback(PartyListModel partyListModel);
+
 }

@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.snoretrain.gaggle.R;
-import com.example.snoretrain.gaggle.adapter.PartyViewHolder;
 import com.example.snoretrain.gaggle.model.PartyModel;
 
 import java.util.ArrayList;
@@ -44,5 +43,6 @@ public class PartyAdapter extends RecyclerView.Adapter<PartyViewHolder> {
     }
 
     @Override
-    public int getItemCount() { return partyCollection.size();}
+    public int getItemCount() { if (partyCollection == null) return 0;
+        return partyCollection.size();}
 }
