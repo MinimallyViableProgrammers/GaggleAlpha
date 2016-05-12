@@ -27,12 +27,14 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public static final String EXTRA_NAME = "com.example.snoretrain.gaggle.adapter.NAME";
     public static final String EXTRA_IMAGE = "com.example.snoretrain.gaggle.adapter.IMAGE";
     public static final String EXTRA_DESCRIPTION = "com.example.snoretrain.gaggle.adapter.DESCRIPTION";
+    public static final String EXTRA_ADDRESS = "com.example.snoretrain.gaggle.adapter.ADDRESS";
     private ImageView partyImage;
     private TextView partyName;
     private TextView partyDescription;
     private String party_name;
     private String party_image;
     private String party_description;
+    private String party_location;
 
     public PartyViewHolder(final View partyView) {
         super(partyView);
@@ -47,6 +49,7 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
         intent.putExtra(EXTRA_NAME, party_name);
         intent.putExtra(EXTRA_IMAGE, party_image);
         intent.putExtra(EXTRA_DESCRIPTION, party_description);
+        intent.putExtra(EXTRA_ADDRESS, party_location);
         context.startActivity(intent);
 
     }
@@ -58,12 +61,10 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
         partyDescription = (TextView)itemView.findViewById(R.id.partyDescription);
         partyName = (TextView)itemView.findViewById(R.id.partyName);
 
-        /*Glide.with(itemView.getContext())
-                .load(party.getPartyImageUrls().get(0))
-                .into(partyImage);*/
         party_image = party.getID();
         party_name = party.getPartyName();
         party_description = party.getPartyDescription();
+        party_location = party.getPartyLocation();
         Context context = partyImage.getContext();
         int id = context.getResources().getIdentifier(party.getID(), "drawable", context.getPackageName());
         partyImage.setImageResource(id);

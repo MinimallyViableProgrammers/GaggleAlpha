@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.snoretrain.gaggle">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/gaggle_logo"
@@ -26,7 +28,8 @@
         </activity>
         <activity
             android:name="com.example.snoretrain.gaggle.activity.DisplayPartyActivity"
-            android:parentActivityName="com.example.snoretrain.gaggle.activity.MainActivity" >
+            android:parentActivityName="com.example.snoretrain.gaggle.activity.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.snoretrain.gaggle.activity.MainActivity" />

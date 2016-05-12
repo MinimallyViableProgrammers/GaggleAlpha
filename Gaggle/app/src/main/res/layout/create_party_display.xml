@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/offWhite"
+    android:background="@color/slateGrey"
     android:orientation="vertical"
     tools:context=".activity.CreatePartyActivity">
     <android.support.v7.widget.Toolbar
@@ -17,50 +17,78 @@
     </android.support.v7.widget.Toolbar>
     <EditText
         android:id="@+id/partyNameSubmit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="Party Name"/>
     <EditText
         android:id="@+id/partyDescriptionSubmit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="Party Description"/>
     <EditText
         android:id="@+id/partyStartTime"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="Start Time"/>
     <EditText
         android:id="@+id/partyEndTime"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="End Time"/>
     <EditText
         android:id="@+id/partyAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="Address"/>
     <EditText
         android:id="@+id/partyState"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="State"/>
     <EditText
         android:id="@+id/partyCity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:hint="City"/>
+    <ListView
+        android:id="@+id/listview"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="fill_vertical"
+        />
+    <CheckBox android:id="@+id/checkbox21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21+?"
+        android:onClick="onCheckboxClicked"
+        android:checked="false" />
     <Button
         android:id="@+id/submitPartyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:text="Submit"/>
 
 

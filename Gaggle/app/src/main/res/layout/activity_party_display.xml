@@ -8,14 +8,6 @@
     android:orientation="vertical"
     tools:context=".activity.DisplayPartyActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/partyDisplayToolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
-        android:background="#00000000">
-    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_width="150dp"
         android:layout_height="500dp"
@@ -27,6 +19,7 @@
             android:layout_height="130dp"/>
         <TextView
             android:id="@+id/partyNameDisplay"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/rebecca_purple"/>
@@ -35,6 +28,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/rebecca_purple"/>
+        <TextView
+            android:id="@+id/partyAddressDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/rebecca_purple" />
     </LinearLayout>
 
 

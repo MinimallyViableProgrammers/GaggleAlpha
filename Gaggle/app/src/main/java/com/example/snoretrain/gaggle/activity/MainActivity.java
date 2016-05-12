@@ -1,51 +1,69 @@
 package com.example.snoretrain.gaggle.activity;
 
+
 import android.content.Context;
 import android.content.Intent;
+
+
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.snoretrain.gaggle.R;
 import com.example.snoretrain.gaggle.adapter.PartyAdapter;
 import com.example.snoretrain.gaggle.itemdecoration.VerticalItemDecoration;
 import com.example.snoretrain.gaggle.listener.IPartyCallbackListener;
+import com.example.snoretrain.gaggle.location.GPSTracker;
 import com.example.snoretrain.gaggle.model.PartyListModel;
 import com.example.snoretrain.gaggle.service.PartySearchTask;
+
+
+
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView partyRecycler;
     private LinearLayoutManager layoutManager;
     private PartyAdapter adapter;
+    double latitude;
+    double longitude;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
+        GPSTracker tracker = new GPSTracker(this);
+        if (tracker.canGetLocation()){
+            latitude = tracker.getLatitude();
+            longitude = tracker.getLongitude();
+        } else tracker.showSettingsAlert();
+        tracker.stopUsingGPS();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        ImageButton createButton = (ImageButton) findViewById(R.id.createButton) ;
-
-
+        ImageButton createButton = (ImageButton) findViewById(R.id.createButton);
         setSupportActionBar(toolbar);
 
         partyRecycler = (RecyclerView) findViewById(R.id.partyRecycler);
 
-        layoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);
+
         IPartyCallbackListener listener = new IPartyCallbackListener() {
             @Override
             public void onSearchCallback(PartyListModel partyListModel) {
+
+                layoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);
 
                 adapter = new PartyAdapter(partyListModel);
 
@@ -67,11 +85,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         PartySearchTask partySearchTask = new PartySearchTask(listener);
-        partySearchTask.execute("red_cup");
+        partySearchTask.execute("--");
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+
+
 }
