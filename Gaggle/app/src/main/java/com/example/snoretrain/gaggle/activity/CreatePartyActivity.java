@@ -155,10 +155,10 @@ public class CreatePartyActivity extends AppCompatActivity{
         switch(view.getId()) {
             case R.id.checkbox21:
                 if (checked){
-                    newPartyImageName = partyImageName.substring(0, partyImageName.length()-1) + "3";
+                    newPartyImageName = partyImageName + "3";
                 }
                 else{
-                    newPartyImageName = partyImageName.substring(0, partyImageName.length()-1) + "2";
+                    newPartyImageName = partyImageName + "2";
                 }
                 break;
 

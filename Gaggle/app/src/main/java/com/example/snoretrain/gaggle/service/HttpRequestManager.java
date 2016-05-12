@@ -37,6 +37,7 @@ public class HttpRequestManager {
 
         InputStream stream = new BufferedInputStream(httpClient.getInputStream());
 
+        IOUtils.toString(stream);
 
 
     }
