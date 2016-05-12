@@ -22,8 +22,8 @@
         <TextView
             android:id="@+id/partyNameDisplay"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
             android:textColor="@color/rebecca_purple"/>
         <TextView
             android:id="@+id/partyDescriptionDisplay"
