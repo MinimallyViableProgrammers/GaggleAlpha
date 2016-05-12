@@ -16,13 +16,13 @@ public class PartyModel {
     private String start_time;
     private String end_time;
     private String street_address;
-    private double lat;
-    private double lng;
-    private double dist;
+    private String completeLocation;
     public String getID() {return image;}
     public String getPartyName() { return party_name; }
     public String getPartyDescription() {return description;}
-    public String getPartyLocation() {return street_address + " " + city + "," + state;}
+    public String getPartyLocation() {
+        completeLocation = (street_address + " " + city + ", " + state);
+        return completeLocation;}
     public void setImage(String pid) { image = pid; }
     public void setParty_name(String someName) { party_name = someName; }
     public void setDescription(String pDesc) { description = pDesc; }

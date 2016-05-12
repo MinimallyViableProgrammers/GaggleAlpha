@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+
 
 import com.example.snoretrain.gaggle.R;
 import com.example.snoretrain.gaggle.activity.DisplayPartyActivity;
@@ -45,7 +45,6 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public void onClick(View v) {
         Context context = v.getContext();
         Intent intent = new Intent(v.getContext(), DisplayPartyActivity.class);
-        int position = getAdapterPosition();
         intent.putExtra(EXTRA_NAME, party_name);
         intent.putExtra(EXTRA_IMAGE, party_image);
         intent.putExtra(EXTRA_DESCRIPTION, party_description);

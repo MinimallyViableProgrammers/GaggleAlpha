@@ -19,7 +19,6 @@ import java.net.URL;
  */
 public class HttpRequestManager {
     private final String GET = "GET";
-    private final String POST = "POST";
 
     public String getParty(String urlString) throws IOException {
         URL url = new URL(urlString);
