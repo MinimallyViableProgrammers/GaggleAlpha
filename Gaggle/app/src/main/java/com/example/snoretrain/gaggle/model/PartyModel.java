@@ -23,6 +23,9 @@ public class PartyModel {
     public String getPartyLocation() {
         completeLocation = (street_address + " " + city + ", " + state);
         return completeLocation;}
+    public String getStartTime(){
+        return start_time;
+    }
     public void setImage(String pid) { image = pid; }
     public void setParty_name(String someName) { party_name = someName; }
     public void setDescription(String pDesc) { description = pDesc; }

@@ -27,11 +27,13 @@ public class DisplayPartyActivity extends AppCompatActivity{
         TextView partyName;
         TextView partyDescription;
         TextView partyAddress;
+        TextView startTime;
 
         partyImage = (ImageView) findViewById(R.id.partyImageDisplay);
         partyName = (TextView) findViewById(R.id.partyNameDisplay);
         partyDescription = (TextView) findViewById(R.id.partyDescriptionDisplay);
         partyAddress = (TextView) findViewById(R.id.partyAddressDisplay);
+        startTime = (TextView) findViewById(R.id.partyTimeDisplay);
 
         Intent intent = getIntent();
 
@@ -40,6 +42,7 @@ public class DisplayPartyActivity extends AppCompatActivity{
         String thisPartyDescription = intent.getStringExtra(PartyViewHolder.EXTRA_DESCRIPTION);
         String thisPartyImage = intent.getStringExtra(PartyViewHolder.EXTRA_IMAGE);
         String thisPartyAddress = intent.getStringExtra(PartyViewHolder.EXTRA_ADDRESS);
+        String thisPartyTime = intent.getStringExtra(PartyViewHolder.EXTRA_TIME);
         String newPartyImage = thisPartyImage.substring(0, thisPartyImage.length()-1) + "1";
 
         Context context = partyImage.getContext();
@@ -50,5 +53,6 @@ public class DisplayPartyActivity extends AppCompatActivity{
         partyName.setText(thisPartyName);
         partyDescription.setText(thisPartyDescription);
         partyAddress.setText(thisPartyAddress);
+        startTime.setText(thisPartyTime);
     }
 }

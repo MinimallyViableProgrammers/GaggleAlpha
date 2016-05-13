@@ -30,7 +30,7 @@ public class PartyPostTask extends AsyncTask<String, String, String> {
             String exceptionString = exception.getMessage();
         }
 
-        return "Hiiiii";
+        return "";
     }
 
     @Override

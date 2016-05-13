@@ -10,7 +10,7 @@
     tools:context=".activity.DisplayPartyActivity">
 
     <LinearLayout
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="400dp"
         android:orientation="vertical"
         android:layout_gravity="center">
@@ -23,15 +23,24 @@
             android:id="@+id/partyNameDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textColor="@color/rebecca_purple"/>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/rebecca_purple"
+            android:paddingBottom="5dp"/>
         <TextView
             android:id="@+id/partyDescriptionDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
             android:textColor="@color/rebecca_purple"/>
         <TextView
             android:id="@+id/partyAddressDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="@color/rebecca_purple" />
+        <TextView
+            android:id="@+id/partyTimeDisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/rebecca_purple" />

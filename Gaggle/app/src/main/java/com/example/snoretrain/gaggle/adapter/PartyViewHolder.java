@@ -28,6 +28,7 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public static final String EXTRA_IMAGE = "com.example.snoretrain.gaggle.adapter.IMAGE";
     public static final String EXTRA_DESCRIPTION = "com.example.snoretrain.gaggle.adapter.DESCRIPTION";
     public static final String EXTRA_ADDRESS = "com.example.snoretrain.gaggle.adapter.ADDRESS";
+    public static final String EXTRA_TIME = "com.example.snoretrain.gaggle.adapter.TIME";
     private ImageView partyImage;
     private TextView partyName;
     private TextView partyDescription;
@@ -35,6 +36,7 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
     private String party_image;
     private String party_description;
     private String party_location;
+    private String start_time;
 
     public PartyViewHolder(final View partyView) {
         super(partyView);
@@ -49,6 +51,7 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
         intent.putExtra(EXTRA_IMAGE, party_image);
         intent.putExtra(EXTRA_DESCRIPTION, party_description);
         intent.putExtra(EXTRA_ADDRESS, party_location);
+        intent.putExtra(EXTRA_TIME, start_time);
         context.startActivity(intent);
 
     }
@@ -64,6 +67,7 @@ public class PartyViewHolder extends RecyclerView.ViewHolder implements View.OnC
         party_name = party.getPartyName();
         party_description = party.getPartyDescription();
         party_location = party.getPartyLocation();
+        start_time = party.getStartTime();
         Context context = partyImage.getContext();
         int id = context.getResources().getIdentifier(party.getID(), "drawable", context.getPackageName());
         partyImage.setImageResource(id);
